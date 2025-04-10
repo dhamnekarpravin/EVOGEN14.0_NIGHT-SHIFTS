@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evogen-NIGHT ASSIGNMENT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #181818;
+            /* Darker background */
+            color: #f8f8f8;
+            /* Light text color */
+            font-family: 'Montserrat', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            /* Add some padding around the content */
+        }
+
+        .hd {
+            color: #e0f7fa;
+            /* Light cyan heading */
+            font-size: 2.5em;
+            /* Increased font size */
+            font-weight: 700;
+            /* Slightly lighter bold */
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-family: 'EB Garamond', serif;
+        }
+
+        hr {
+            border: 1px solid #37474f;
+            /* Dark grey horizontal rule */
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        .intro-text {
+            padding: 30px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-family: "EB Garamond", serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            /* Slightly lighter weight */
+            font-style: italic;
+            line-height: 1.6;
+            color: #dcedc8;
+            /* Light green text */
+            text-align: justify;
+            /* Justify the text for better readability */
+            font-size: 25px;
+        }
+
+        .rule {
+            background-color: rgba(38, 50, 56, 0.8);
+            /* Darker background for rules with some transparency */
+            border: 1px solid #546e7a;
+            /* Medium grey border */
+            border-radius: 10px;
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 800px;
+            color: #cfd8dc;
+            /* Light grey text for rules */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* Subtle box shadow */
+        }
+
+        .rule h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #b2ebf2;
+            /* Light blue heading for rules */
+            font-size: 1.8em;
+            letter-spacing: 0.08em;
+        }
+
+        .rule div {
+            padding: 20px;
+            letter-spacing: 0.05em;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            /* Responsive grid */
+            gap: 15px;
+        }
+
+        .rule div h1 {
+            font-size: 1.1em;
+            padding: 15px;
+            border: 1px solid #607d8b;
+            /* Slightly lighter grey border for rule items */
+            border-radius: 5px;
+            text-align: left;
+            background-color: rgba(45, 62, 75, 0.7);
+            /* Darker background for rule items */
+            margin: 0;
+        }
+
+        .topics-heading {
+            text-align: center;
+            color: #e0f7fa;
+            /* Light cyan heading for topics */
+            margin-top: 30px;
+            font-size: 2em;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-family: 'EB Garamond', serif;
+        }
+
+        .columns {
+            display: flex;
+            justify-content: space-around;
+            width: 90%;
+            /* Increased width */
+            max-width: 1200px;
+            /* Increased max width */
+            margin: 30px auto;
+        }
+
+        .column {
+            flex: 1;
+            padding: 20px;
+            border: 1px solid #607d8b;
+            /* Medium grey border */
+            border-radius: 8px;
+            margin: 0 15px;
+            color: #f0f4c3;
+            /* Light yellow/green text */
+            font-size: 1.2em;
+            background: linear-gradient(135deg, #263238, #37474f);
+            /* Darker gradient */
+            letter-spacing: 0.06em;
+            text-align: center;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            /* Smooth transitions */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .column:hover {
+            transform: translateY(-5px);
+            /* Slight lift on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            /* More prominent shadow on hover */
+            background: linear-gradient(135deg, #37474f, #455a64);
+            /* Slightly lighter gradient on hover */
+        }
+
+        .column br {
+            margin-bottom: 10px;
+            /* Add space between text and button */
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            margin-top: 15px;
+            background: linear-gradient(180deg, #d32f2f, #f44336);
+            /* Red gradient button */
+            font-weight: 600;
+            text-decoration: none;
+            color: white;
+            border-bottom: 2px solid #b71c1c;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: linear-gradient(180deg, #f44336, #e53935);
+            /* Slightly lighter red on hover */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .columns {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .column {
+                width: 80%;
+                margin: 15px 0;
+            }
+
+            .rule div {
+                grid-template-columns: 1fr;
+                /* Single column on smaller screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 class="hd">"Power BI Insights: Visualize, Analyze, Dominate."</h1>
+    </div>
+    <hr>
+    <div class="intro-text">
+        <p>"Welcome to the 'Data to Dashboard' challenge, a competition designed to test and enhance Power BI skills.
+            Participants will collect data from online sources, clean and prepare it, and then use Power BI to create
+            interactive dashboards that reveal key insights and present to a non-technical person. This event focuses on
+            practical application, allowing students to demonstrate their ability to use Power BI for data analysis,
+            visualization, and effective communication of findings. Judges will evaluate the clarity, interactivity, and
+            impact of the dashboards, as well as the students' presentation skills."</p>
+    </div>
+
+    <div class="rule">
+        <h1>Power BI Insights Challenge: Competition Rules</h1>
+        <div>
+            <h1>Participants must select one topic among the following 3 topics</h1>
+            <h1>Participants are responsible for collecting their own data from reputable online sources</h1>
+            <h1>Data must be relevant to the chosen topic</h1>
+            <h1>Participants must use Power BI Desktop to create their dashboards and visualizations</h1>
+            <h1>No pre-built templates or dashboards are allowed</h1>
+            <h1>Participants will have to present their dashboards and findings to the judges</h1>
+            <h1>Participants must submit their Power BI (.pbix) file and presentation slides by night itself</h1>
+            <h1>(NOTE): Submitted file must be presented in the final round</h1>
+            <h1>Participants must have access to a computer capable of running Power BI desktop</h1>
+            <h1>The organizers reserve the right to amend these rules as necessary</h1>
+        </div>
+    </div>
+
+    <h1 class="topics-heading">Here are the topics</h1>
+
+    <div class="columns">
+        <div class="column">"Ancient Indian agricultural records (1500 BCE - 300 CE)" <br> <a class="btn"
+                href="top1.html">Read more</a>
+        </div>
+        <div class="column"> "Ancient Engineering Marvels: Analyzing Construction and Innovation"<br> <a class="btn"
+                href="top2.html">Read more</a>
+        </div>
+        <div class="column">"Ancient Calendars and Timekeeping: Analyzing the Measurement of Time"<br> <a class="btn"
+                href="top3.html">Read more</a>
+        </div>
+    </div>
+</body>
+
+</html>
